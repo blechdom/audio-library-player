@@ -12,11 +12,10 @@
 
 ## Database
 
-1. mongodb
+1. mongodb + mongoose
 2. URL: `mongodb://localhost:27017`
 3. Database: `audioDB`
 
 ## Dev
 
-1. Collection `audiolibrary` auto populates if empty or doesn't exist
-2. FFProbe could be used to auto-detect audio file metadata
+1. FFProbe could be used to auto-detect audio file metadata
