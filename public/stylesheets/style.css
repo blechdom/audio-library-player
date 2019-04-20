@@ -1,0 +1,22 @@
+body {
+  padding: 50px;
+  font: 14px "Arial", Helvetica, Arial, sans-serif;
+  align: 'center';
+}
+
+a {
+  color: #00B7FF;
+}
+table, td, th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+}
