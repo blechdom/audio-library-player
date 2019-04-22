@@ -158,4 +158,46 @@ router.route('/:id/delete')
 	  });
 	})
 
+//POPULATE DATABASE
+router.route('/populate')
+  .get(function(req, res) {
+
+    var ffprobe = require('ffprobe');
+    var ffprobeStatic = require('ffprobe-static');
+    const fs = require('fs');
+    const audioFolder = './audio/';
+
+    fs.readdir(audioFolder, (err, files) => {
+      files.forEach((file, i, files) => {
+
+        ffprobe(audioFolder + file, { path: ffprobeStatic.path })
+          .then(function (info) {
+          	var title = file;
+          	var artist = '';
+          	var duration = info.streams[0].duration;
+          	var codec = info.streams[0].codec_name;
+
+          	mongoose.model('Audiofile').create({
+          	  title : title,
+          	  artist : artist,
+          	  duration : duration,
+          	  codec : codec
+          	}, function (err, audiofileID) {
+              if (err) {
+                res.send("Populate Error: " + err);
+              }
+              else {
+                if(i==files.length-1){
+                  res.redirect("/");
+                }
+              }
+            });
+        })
+        .catch(function (err) {
+          console.error(err);
+        })
+      });
+    });
+  })
+
 module.exports = router;

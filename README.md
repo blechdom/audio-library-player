@@ -18,4 +18,9 @@
 
 ## Dev
 
-1. FFProbe could be used to auto-detect audio file metadata
+1. ffprobe requires ffmpeg / ffprobe-static to be installed
+
+## Feature
+
+1. put audio files into audio/ folder
+2. Click link to auto-populate database using ffprobe
