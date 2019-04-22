@@ -1,25 +1,23 @@
 <% include layout %>
-<h1><%= title %></h1>
-<br><br>
-  <p>
-    <a href="/create">Create New Audiofile</a>
-  </p>
-
+<br>
+<p>
+  <a href="/create">Create New Audiofile</a>
+</p>
 <br><br>
 <table width="90%">
-  <tr align="center">
-    <th>title</th>
-    <th>artist</th>
-    <th>duration</th>
-    <th>codec</th>
-    <th>id</th>
-    <th>actions</th>
+  <tr>
+    <th>TITLE</th>
+    <th>ARTIST</th>
+    <th>DURATION</th>
+    <th>CODEC</th>
+    <th>ID</th>
+    <th>ACTIONS</th>
   </tr>
 <% for(var i=0; i<audiofiles.length; i++) {%>
-  <tr align="center">
+  <tr>
     <td><%= audiofiles[i].title %></td>
     <td><%= audiofiles[i].artist %></td>
-    <td><%= audiofiles[i].duration %>ms</td>
+    <td><%= audiofiles[i].duration %></td>
     <td><%= audiofiles[i].codec %></td>
     <td><%= audiofiles[i]._id %></td>
     <td>

@@ -1,22 +1,21 @@
 <% include layout %>
-<h1>Audiofile ID: <%= audiofile._id %></h1>
-<form action="/<%=audiofile._id%>/update" method='post' name='updateaudiofile'>
+<br/>
+<h2>Update ID: <%= audiofile._id %></h2>
+<br/>
+<form action="/<%= audiofile._id %>/update" method='post'>
   <p>Title:
-    <input type='text' value='<%=audiofile.title%>' name='title' id='title-input'>
+    <input type='text' value='<%= audiofile.title %>' name='title'>
   </p>
   <p>Artist:
-    <input type='text' value='<%=audiofile.artist%>' name='artist' id='artist-input'>
+    <input type='text' value='<%= audiofile.artist %>' name='artist'>
   </p>
   <p>Duration:
-    <input type='text' value='<%=audiofile.duration%>' name='duration' id='duration-input'>
+    <input type='text' value='<%= audiofile.duration %>' name='duration'>
   </p>
   <p>Codec:
-    <input type='text' value='<%=audiofile.codec%>' name='codec' id='codec-input'>
+    <input type='text' value='<%= audiofile.codec %>' name='codec'>
   </p>
   <p>
-    <input type="hidden" value="PUT" name="_method">
-  </p>
-  <p>
-    <button id="btnSubmit" type="submit">UPDATE</button>
+    <br/><button type="submit">UPDATE</button>
   </p>
 </form>

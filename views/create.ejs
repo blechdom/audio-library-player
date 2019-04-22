@@ -1,20 +1,21 @@
-
 <% include layout %>
-<h1><%= title %></h1>
-<form id="addAudiofileForm" action="/" method='post' name='addAudiofile'>
+<br/>
+<h2>Create</h2>
+<br/>
+<form action="/create" method='post'>
   <p>Title:
-    <input type='text' name='title' id='title-input'>
+    <input type='text' name='title'>
   </p>
   <p>Artist:
-    <input type='text' name='artist' id='artist-input'>
+    <input type='text' name='artist'>
   </p>
   <p>Duration:
-    <input type='text' name='duration' id='duration-input'>
+    <input type='text' name='duration'>
   </p>
   <p>Codec:
-    <input type='text' name='codec' id='codec-input'>
+    <input type='text' name='codec'>
   </p>
   <p>
-    <button id="btnAdd" type="submit">ADD</button>
+    <br/><button type="submit">ADD</button>
   </p>
 </form>

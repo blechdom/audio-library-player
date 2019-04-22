@@ -7,8 +7,8 @@
 
 ## Run
 
-1. `npm run dev`
-2. go to `localhost:3000`
+1. `npm run dev` or `npm start`
+2. go to `http://localhost:3000`
 
 ## Database
 
